@@ -1,4 +1,4 @@
-module OneToTen where
+module NinetyNineProblems.OneToTen where
 
 
 -- 1.) Find the last element of a list.
@@ -7,7 +7,7 @@ myLast = head . reverse
 
 -- 2.) Find the last but one element of a list.
 myButLast :: [a] -> a
-myButLast list = reverse list !! 2
+myButLast list = reverse list !! 1
 
 -- 3.) Find the K'th element of a list. The first element in the list is
 elementAt :: [a] -> Int -> a
