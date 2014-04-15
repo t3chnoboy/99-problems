@@ -25,3 +25,7 @@ spec = do
     describe "split" $ do
       it "should split a list into two parts; the length of the first part is given" $ do
         split "abcdefghik" 3 `shouldBe` ("abc", "defghik")
+
+    describe "slice" $ do
+      it "should  extract a slice from a list" $ do
+        slice ['a','b','c','d','e','f','g','h','i','k'] 3 7 `shouldBe` "cdefg"

@@ -16,3 +16,7 @@ dropEvery xs n =  map fst . filter (\x -> mod (snd x) n /= 0) $ zip xs [1..]
 -- 17.) Split a list into two parts; the length of the first part is given.
 split :: [a] -> Int -> ([a], [a])
 split xs n = (take n xs, drop n xs)
+
+-- 18.) Extract a slice from a list
+slice :: [a] -> Int -> Int -> [a]
+slice xs i k = take (k - i + 1) $  drop (i - 1) xs
