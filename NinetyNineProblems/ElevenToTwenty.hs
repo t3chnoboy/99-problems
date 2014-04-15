@@ -12,3 +12,7 @@ repli xs n = [x | x <- xs, _ <-[1..n]]
 -- 16.) Drop every N'th element from a list.
 dropEvery :: Integral a => [a1] -> a -> [a1]
 dropEvery xs n =  map fst . filter (\x -> mod (snd x) n /= 0) $ zip xs [1..]
+
+-- 17.) Split a list into two parts; the length of the first part is given.
+split :: [a] -> Int -> ([a], [a])
+split xs n = (take n xs, drop n xs)

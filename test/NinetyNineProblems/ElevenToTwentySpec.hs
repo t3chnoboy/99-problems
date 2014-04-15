@@ -21,3 +21,7 @@ spec = do
     describe "dropEvery" $ do
       it "should drop every N'th element from a list" $ do
         dropEvery "abcdefghik" 3 `shouldBe` "abdeghk"
+
+    describe "split" $ do
+      it "should split a list into two parts; the length of the first part is given" $ do
+        split "abcdefghik" 3 `shouldBe` ("abc", "defghik")
