@@ -29,3 +29,12 @@ spec = do
     describe "slice" $ do
       it "should  extract a slice from a list" $ do
         slice ['a','b','c','d','e','f','g','h','i','k'] 3 7 `shouldBe` "cdefg"
+
+    describe "rotate" $ do
+      it "should rotate a list N places to the left" $ do
+        rotate ['a','b','c','d','e','f','g','h'] 3 `shouldBe` "defghabc"
+        rotate ['a','b','c','d','e','f','g','h'] (-2) `shouldBe` "ghabcdef"
+
+    describe "removeAt" $ do
+      it "should remove the K'th element from a list" $ do
+        removeAt 2 "abcd" `shouldBe` ('b',"acd")
